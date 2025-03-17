@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 250px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      margin: 0 0 15px 0;
+      color: #2c3e50;
+      font-size: 16px;
+    }
+    .switch {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .folder-section {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+    .folder-section h3 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #2c3e50;
+    }
+    .folder-input {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      flex-grow: 1;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .checkbox-option {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #444;
+    }
+    button {
+      padding: 5px 10px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1976D2;
+    }
+    .status {
+      margin-top: 10px;
+      color: #666;
+      font-size: 12px;
+    }
+    .folder-path {
+      font-size: 12px;
+      color: #666;
+      word-break: break-all;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>OneClick Image Downloader</h2>
+  <div class="switch">
+    <label>
+      <input type="checkbox" id="toggleSwitch">
+      Enable One-Click Download
+    </label>
+  </div>
+  <div class="folder-section">
+    <h3>Download Folder</h3>
+    <div class="folder-input">
+      <input type="text" id="folderPath" placeholder="e.g., Images/Website">
+      <button id="saveFolder">Save</button>
+    </div>
+    <div class="checkbox-option">
+      <input type="checkbox" id="orderImages">
+      <label for="orderImages">Order saved images (image_001.jpg)</label>
+    </div>
+    <div class="folder-path">Current folder: <span id="currentFolder">Downloads</span></div>
+  </div>
+  <div class="status" id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
